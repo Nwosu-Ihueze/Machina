@@ -1,0 +1,204 @@
+.glitch {
+  position: relative;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 50px;
+  font-family: "Exo", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  
+  color: #fff;
+  clip: rect(0, 900px, 0, 0);
+}
+.glitch::before {
+  left: 7px;
+  text-shadow: 1px 0 green;
+  -webkit-animation: glitch-effect 3s infinite linear alternate-reverse;
+          animation: glitch-effect 3s infinite linear alternate-reverse;
+}
+.glitch::after {
+  left: 3px;
+  text-shadow: -1px 0 red;
+  -webkit-animation: glitch-effect 2s infinite linear alternate-reverse;
+          animation: glitch-effect 2s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes glitch-effect {
+  0% {
+    clip: rect(29px, 9999px, 51px, 0);
+  }
+  5% {
+    clip: rect(81px, 9999px, 34px, 0);
+  }
+  10% {
+    clip: rect(96px, 9999px, 48px, 0);
+  }
+  15.0% {
+    clip: rect(31px, 9999px, 4px, 0);
+  }
+  20% {
+    clip: rect(65px, 9999px, 41px, 0);
+  }
+  25% {
+    clip: rect(57px, 9999px, 26px, 0);
+  }
+  30.0% {
+    clip: rect(85px, 9999px, 8px, 0);
+  }
+  35% {
+    clip: rect(93px, 9999px, 36px, 0);
+  }
+  40% {
+    clip: rect(4px, 9999px, 44px, 0);
+  }
+  45% {
+    clip: rect(71px, 9999px, 65px, 0);
+  }
+  50% {
+    clip: rect(79px, 9999px, 88px, 0);
+  }
+  55.0% {
+    clip: rect(88px, 9999px, 77px, 0);
+  }
+  60.0% {
+    clip: rect(77px, 9999px, 13px, 0);
+  }
+  65% {
+    clip: rect(88px, 9999px, 55px, 0);
+  }
+  70% {
+    clip: rect(12px, 9999px, 35px, 0);
+  }
+  75% {
+    clip: rect(52px, 9999px, 2px, 0);
+  }
+  80% {
+    clip: rect(78px, 9999px, 48px, 0);
+  }
+  85.0% {
+    clip: rect(36px, 9999px, 55px, 0);
+  }
+  90% {
+    clip: rect(70px, 9999px, 60px, 0);
+  }
+  95% {
+    clip: rect(62px, 9999px, 84px, 0);
+  }
+  100% {
+    clip: rect(76px, 9999px, 82px, 0);
+  }
+}
+
+@keyframes glitch-effect {
+  0% {
+    clip: rect(29px, 9999px, 51px, 0);
+  }
+  5% {
+    clip: rect(81px, 9999px, 34px, 0);
+  }
+  10% {
+    clip: rect(96px, 9999px, 48px, 0);
+  }
+  15.0% {
+    clip: rect(31px, 9999px, 4px, 0);
+  }
+  20% {
+    clip: rect(65px, 9999px, 41px, 0);
+  }
+  25% {
+    clip: rect(57px, 9999px, 26px, 0);
+  }
+  30.0% {
+    clip: rect(85px, 9999px, 8px, 0);
+  }
+  35% {
+    clip: rect(93px, 9999px, 36px, 0);
+  }
+  40% {
+    clip: rect(4px, 9999px, 44px, 0);
+  }
+  45% {
+    clip: rect(71px, 9999px, 65px, 0);
+  }
+  50% {
+    clip: rect(79px, 9999px, 88px, 0);
+  }
+  55.0% {
+    clip: rect(88px, 9999px, 77px, 0);
+  }
+  60.0% {
+    clip: rect(77px, 9999px, 13px, 0);
+  }
+  65% {
+    clip: rect(88px, 9999px, 55px, 0);
+  }
+  70% {
+    clip: rect(12px, 9999px, 35px, 0);
+  }
+  75% {
+    clip: rect(52px, 9999px, 2px, 0);
+  }
+  80% {
+    clip: rect(78px, 9999px, 48px, 0);
+  }
+  85.0% {
+    clip: rect(36px, 9999px, 55px, 0);
+  }
+  90% {
+    clip: rect(70px, 9999px, 60px, 0);
+  }
+  95% {
+    clip: rect(62px, 9999px, 84px, 0);
+  }
+  100% {
+    clip: rect(76px, 9999px, 82px, 0);
+  }
+}
+
+
+.about {
+  background-color: #0d0d0e;
+  
+}
+
+.clicker {
+  cursor: pointer;
+  width: 110px;
+  height: 55px;
+  background: white;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+  animation: gradient 10.5s infinite 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) forwards;
+  
+  padding-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;  
+}
+
+@keyframes gradient {
+  0% { background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%) }
+  10% { background: linear-gradient(90deg, #d53369 0%, #daae51 100%) }
+  20% { background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%) }
+  30% { background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%) }
+  40% { background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%) }
+  50% { background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%) }
+  60% { background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%) }
+  70% { background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%) }
+  80% { background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%) }
+  90% { background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%) }
+  100% { background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%) }
+}

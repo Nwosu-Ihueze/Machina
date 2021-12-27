@@ -1,0 +1,15 @@
+@import url('/src/fonts/stylesheet.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-card {
+  @apply flex flex-col justify-center items-center bg-black h-screen font-mono py-40;
+}
+.menu-card-content {
+  @apply flex flex-col justify-center items-center;
+}
+.gradient {
+  @apply tracking-wide text-transparent bg-clip-text bg-gradient-to-b from-purple-400 via-pink-500 to-red-500;
+}
+
