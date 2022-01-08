@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Dropdown from './components/Dropdown';
+// import Card from './components/Cards';
 
 
 function App() {

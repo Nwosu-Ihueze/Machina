@@ -1,0 +1,28 @@
+{
+  "name": "Igodotor",
+  "element": "Lightning",
+  "image": "",
+  "properties": {
+    "files": [
+      {
+        "uri": "0000.png",
+        "type": "image/png"
+      }
+    ],
+    "attributes": [
+      {
+        "background": "black",
+        "body": "naruto",
+        "eyes": "fear",
+        "clothes": "yellow",
+        "head_gear": "cap"
+      }
+    ],
+    "creators": [
+      {
+        "address": "8hQatTf66DrXdJS777b72fCx9Hi974WwTWUnQV8FWwPF",
+        "share": 100
+      }
+    ]
+  }
+}

@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+
 
 const Footer = () => {
   return (
     <div className="flex justify-center items-center h-16 bg-black text-gray-400 border-t">
-       <p className="text-center font-mono">Copyright © 2021 <Link className="text-purple-900" to='/'>Skull Machina.</Link> All rights reserved.</p>
+       <p className="text-center font-mono">Copyright © 2021 <a className="gradient" href='https://twitter.com/SkullMachina'>Skull Machina.</a> All rights reserved.</p>
     </div>
   );
 };

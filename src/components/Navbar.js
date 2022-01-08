@@ -1,7 +1,65 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
+
 
 const Navbar = ({ toggle }) => {
+  // State
+const [walletAddress, setWalletAddress] = useState(null);
+
+  const checkIfWalletIsConnected = async () => {
+    try {
+      const { solana } = window;
+
+      if (solana) {
+        if (solana.isPhantom) {
+          console.log('Phantom wallet found!');
+          const response = await solana.connect({ onlyIfTrusted: true });
+          console.log(
+            'Connected with Public Key:',
+            response.publicKey.toString()
+          );
+          setWalletAddress(response.publicKey.toString());
+        }
+      } else {
+        alert('Solana object not found! Get a Phantom Wallet 👻');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const connectWallet = async () => {
+    const { solana } = window;
+  
+    if (solana) {
+      const response = await solana.connect();
+      console.log('Connected with Public Key:', response.publicKey.toString());
+      setWalletAddress(response.publicKey.toString());
+    }
+  };
+
+  /*
+   * We want to render this UI when the user hasn't connected
+   * their wallet to our app yet.
+   */
+  const renderNotConnectedContainer = () => (
+    <button
+      className="px-6 py-2 mt-auto font-semibold text-gray-400 bg-gradient-to-r from-pink-500 to-red-500 rounded-full"
+      onClick={connectWallet}
+    >
+      Connect Wallet
+    </button>
+  );
+
+  useEffect(() => {
+    const onLoad = async () => {
+      await checkIfWalletIsConnected();
+    };
+    window.addEventListener('load', onLoad);
+    return () => window.removeEventListener('load', onLoad);
+  }, []);
+
  return (
   <nav className='flex justify-between items-center h-16 bg-black text-gray-400 relative shadow-sm font-mono' role='navigation'>
   <Link to='/' className='pl-8'><svg width="45" height="30" viewBox="0 0 45 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,9 +83,7 @@ const Navbar = ({ toggle }) => {
           <Link className="md:flex hidde items-center hover:text-purple-900" to="/">
              Marketplace
           </Link>
-          <Link className="md:flex hidde items-center hover:text-purple-900 py-2 px-6 bg-gradient-to-r from-pink-500 to-red-500 rounded-full font-bold text-gray-400" to="/">
-             Connect Wallet
-          </Link>
+          {!walletAddress && renderNotConnectedContainer()}
           
         </div>
 </nav>

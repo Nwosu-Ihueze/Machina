@@ -1,6 +1,7 @@
 import React from "react";
-import Pack from '../images/0007.png'
-import { Link } from 'react-router-dom';
+import Profile from '../images/17.png';
+import '../style.css';
+import vid from '../images/skull.mp4';
 
 
 const Body = () => {
@@ -11,14 +12,14 @@ const Body = () => {
     <div className="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-28">
         <div className="flex flex-col items-start mb-16 text-center md:text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
             <h1 className="mb-8 md:text-left text-2xl font-black tracking-wide gradient md:text-5xl title-font"> About Skullmachina </h1>
-            <p className="font-mono mb-8 text-base leading-relaxed text-center md:text-left text-gray-400 break-normal"> Skullmachina is a collection of 500 cyborg skeletons NFTs living on the Solana blockchain. Your cyborg acts as your membership card which opens you to a variety of members-only benefits and first pick for new releases.</p>
+            <p className="font-mono mb-8 text-base leading-relaxed text-center md:text-left text-gray-400 break-normal"> Skullmachina is a gaming metaverse of Ustranov made up of 500 generated cyborg skeletons from Vogantu - the 13 warrior clans. This collection living on the Solana blockchain acts as your membership card which opens you to a variety of members-only benefits and first pick for new releases.</p>
             <div className=" md:items-start md:justify-items-start grid">
-                <button className="font-mono flex items-center px-6 py-2 mt-auto font-semibold text-gray-400 bg-gradient-to-r from-pink-500 to-red-500 rounded-full"><Link to="/">Join Us</Link> </button>
+                <button className="font-mono flex items-center px-6 py-2 mt-auto font-semibold text-gray-400 bg-gradient-to-r from-pink-500 to-red-500 rounded-full"><a href='https://discord.gg/3TFuWa9XHz'>Join Us</a> </button>
 
             </div>
         </div>
         <div className="w-full lg:w-1/3 lg:max-w-lg md:w-1/2">
-    <img src={Pack} alt="mobile" className="w-full rounded-lg" />
+    <img src={Profile} alt="mobile" className="w-full rounded-lg" />
         </div>
     </div>
 </section>
@@ -134,7 +135,7 @@ const Body = () => {
 </svg>
               </div>
               <h6 className="text-xl mb-1 font-semibold tracking-wide gradient">Is there a whitelist?</h6>
-              <p className="font-mono mb-4 text-gray-400">Yes, there would be whitelist for this project and priorities will be accorded to members with the launched NFTs.</p>
+              <p className="font-mono mb-4 text-gray-400">Yes, there would be whitelist for this project with benefits such as: <br/> 1. Access to presale. <br/>2. Game token minting for free <br/> 3. Contribute to actualizing the game.</p>
             </div>
           </div>
           <div className="relative flex flex-col min-w-0">
@@ -145,7 +146,7 @@ const Body = () => {
 </svg>
               </div>
               <h6 className="text-xl mb-1 font-semibold tracking-wide gradient">Why should I care?</h6>
-              <p className="font-mono mb-4 text-gray-400">This is an opportunity to be part of the gaming metaverse in Solana and also to support undergraduates who are going into NFT.</p>
+              <p className="font-mono mb-4 text-gray-400">This is an opportunity to be part of the gaming metaverse in Solana as we would be collaborating with other platforms for cross-platform character gaming usage which other gaming projects haven't done before.</p>
             </div>
           </div>
         </div>
@@ -158,7 +159,7 @@ const Body = () => {
 </svg>
               </div>
               <h6 className="text-xl mb-1 font-semibold tracking-wide gradient">Will this be listed in secondary markets?</h6>
-              <p className="font-mono mb-4 text-gray-400">Ofcourse! We would be listing in secondary markets like Solanart after minting</p>
+              <p className="font-mono mb-4 text-gray-400">Ofcourse! We would be listing in secondary markets like Magic Eden after minting</p>
             </div>
           </div>
           <div className="relative flex flex-col min-w-0">
@@ -215,7 +216,7 @@ const Body = () => {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-wide mb-1 gradient">Benbyx</h4>
-              <p className="font-mono text-gray-400 text-center"><Link className="text-purple-900" to='/'>Benbyx</Link> is a product designer and mentor. He loves the application of colors and shapes for personification.</p>
+              <p className="font-mono text-gray-400 text-center"><a className="gradient" href='https://twitter.com/Benbyx10'>Benbyx</a> is a product designer, gamer and mentor. He loves the application of colors and shapes for personification.</p>
             </div>
 
             {/* 2nd item */}
@@ -231,7 +232,7 @@ const Body = () => {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-wide mb-1 gradient">AdaIhueze</h4>
-              <p className="font-mono text-gray-400 text-center"><Link className="text-purple-900" to='/'>AdaIhueze</Link> is a computer programmer with sauce. She functions better at night than the day that can explain the obsession with coffee.</p>
+              <p className="font-mono text-gray-400 text-center"><a className="gradient" href="https://twitter.com/adaihueze" >AdaIhueze</a> is a computer programmer with sauce. She functions better at night than the day that can explain the obsession with coffee.</p>
             </div>
 
              {/* 3rd item */}
@@ -248,7 +249,7 @@ const Body = () => {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-wide mb-1 gradient">Favalcodes</h4>
-              <p className="font-mono text-gray-400 text-center"><Link className="text-purple-900" to='/'>Favalcodes</Link> is a software developer who destresses with humor. She loves getting things done and in an organized way.</p>
+              <p className="font-mono text-gray-400 text-center"><a className="gradient" href='https://twitter.com/@godwinvalerie1'>Favalcodes</a> is a software developer who destresses with humor. She loves getting things done and in an organized way.</p>
             </div>
 
           </div>
@@ -256,6 +257,25 @@ const Body = () => {
         </div>
       </div>
     </section>
+
+    {/* <section>
+    <div class="card">
+            <div className="mana"></div>
+            <div className="character-img">
+            <img src={Pack} alt="mobile" />
+            </div>
+            <div className="char-name font-mono">
+                <h1 className="font-black">Ichtron</h1>
+            </div>
+            <div className="info-text">
+                <div className="element font-mono font-bold">
+                    <p className="font-black">Lightning</p>
+                </div>
+            </div>
+            <div className="power">
+            </div>
+        </div>
+    </section> */}
 
    
     

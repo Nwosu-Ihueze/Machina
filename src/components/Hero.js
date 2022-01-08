@@ -1,8 +1,10 @@
 import React from 'react';
+import GIF from '../images/skull.gif'
 import { Link } from 'react-router-dom';
-import ImageOne from '../images/Browser.png'
+
 
 const Hero = () => {
+ 
   return (
     <section className='z-40 h-full'>
     <div className='bg-white'>
@@ -26,6 +28,7 @@ const Hero = () => {
             <div className="max-w-3xl mx-auto">
               <div className="max-w-xs mx-auto sm:max-w-none sm:justify-center">
                 <div>
+      
                   <Link className="mt-4 py-2 px-6 font-mono bg-gradient-to-r from-pink-500 to-red-500 rounded-full font-bold text-gray-400 text-xl transition duration-300 ease-in-out items-center" to="/">Mint</Link>
                 </div>
               </div>
@@ -36,7 +39,8 @@ const Hero = () => {
           <div>
             <div className="relative flex justify-center mb-8">
               <div className="flex flex-col justify-center">
-              <img src={ImageOne} alt="play" className="object-cover w-full h-full" />
+              <img src={GIF} alt="play" />
+              
               </div>
             </div>
 
